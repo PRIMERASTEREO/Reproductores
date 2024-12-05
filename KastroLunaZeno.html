@@ -1981,13 +1981,13 @@ a.ajax({
 type: "GET",
 crossDomain: !0,
 cache: !1,
-url: "https://api.twj.es/radio_info/?radio_url=https://stream.zeno.fm/" + Bc ,
+url: "https://zenoplay.zenomedia.com/api/zenofm/nowplaying/" + Bc + "?_=" + new Date().getTime() ,
 dataType: "json",
 async: !0,
 success: function(a) {
 if (a) try {
-var b = a.songtitle + " - "  + a.title;
-v != b && (v = b, ya(), "small" == y ? P() : (M = a.songtitle + "  " , N = a.title, l(), H()))
+var b = a.title + " - "  + a.artist;
+v != b && (v = b, ya(), "small" == y ? P() : (M = a.title + " - " , N = a.artist, l(), H()))
 } catch (A) {}
 },
 error: function(a, b, c) {}
